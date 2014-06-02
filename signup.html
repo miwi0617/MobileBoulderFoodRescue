@@ -21,32 +21,25 @@
 <body>
 	<div data-role="page" id="home">  
 		<div data-position="fixed" data-role="header" data-theme="b">  
-			<a rel="external"data-icon="home" data-iconpos="notext" href="home.html">Home</a>  
-			<h1>BFR</h1> 
-
-			<a rel="external"data-icon="grid" data-iconpos="notext" href="home.html">Grid</a>
-		</div>
-		<h1>Todays Routes</h1>
-		<h3>Shift 1</h3>
-		<table style="width:200px">
-			<tr>
-				<td>Donor</td>
-				<td>xxx</td>		
-			</tr>
-			<tr>
-				<td>Recipient</td>
-				<td>xxx</td>		
-			</tr>
-			<tr>
-				<td>Volunteers</td>
-				<td>xxx</td>		
-			</tr>
-			<tr>
-				<td>Time Frame</td>
-				<td>xxx</td>		
-			</tr>
-		</table>
-
+			<!-- <a data-icon="home" data-iconpos="notext" rel="external" href="home.html">Home</a>  --> 
+			<h1>BFR</h1>  
+		</div> 
+		<h1>Create your BFR Account</h1>
+		<form id="HLogin" method="POST">  
+			<div data-role="fieldcontain">  
+				<label for="url">Username:</label>  
+				<input class="required" id="Lusername" name="uid_r" value="" type="text">            
+			</div>  
+			<div data-role="fieldcontain">  
+				<label for="url">Password:</label>  
+				<input id="Lpassword" name="pwd_r" value="" type="password">            
+			</div>  
+			<div data-role="fieldcontain">  
+				<label for="url">Confirm Password:</label>  
+				<input id="Lpassword" name="pwd_r" value="" type="password">            
+			</div> 
+			<center><a rel="external" href="index.html" data-role="button" data-theme="b" data-inline="true">Create Account</a></center>
+		</form>  
 	</div>
 </body>
 </html>
