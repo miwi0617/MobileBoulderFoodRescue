@@ -23,7 +23,7 @@ textarea,
 button,
 .ui-btn {
 	font-size: 1em;
-	line-height: 1.3;
+	line-height: 3;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; /*{global-font-family}*/
 	
 }
