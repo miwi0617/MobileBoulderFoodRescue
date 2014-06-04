@@ -478,8 +478,8 @@ html .ui-bar-b .ui-btn:active,
 html .ui-body-b .ui-btn:active,
 html body .ui-group-theme-b .ui-btn:active,
 html head + body .ui-btn.ui-btn-b:active {
-	background: #003AAD /*{b-bdown-background-color}*/;
-	border-color: #0056bc /*{b-bdown-border}*/;
+	background: #95c066 /*{b-bdown-background-color}*/;
+	border-color: #4b7333 /*{b-bdown-border}*/;
 	color: #ffffff /*{b-bdown-color}*/;
 	text-shadow: undefined /*{b-bdown-shadow-x}*/ undefined /*{b-bdown-shadow-y}*/ undefined /*{b-bdown-shadow-radius}*/ undefined /*{b-bdown-shadow-color}*/;
 }
