@@ -90,8 +90,8 @@ label.ui-btn {
 -----------------------------------------------------------------------------------------------------------*/
 /* Class ui-btn-corner-all deprecated in 1.4 */
 .ui-corner-all {
-	-webkit-border-radius: .25em /*{global-radii-blocks}*/;
-	border-radius: .25em /*{global-radii-blocks}*/;
+	-webkit-border-radius: .25em; /*{global-radii-blocks}*/
+	border-radius: .25em; /*{global-radii-blocks}*/
 }
 /* Buttons */
 .ui-btn-corner-all,
@@ -102,14 +102,14 @@ label.ui-btn {
 .ui-flipswitch.ui-corner-all,
 /* Count bubble */
 .ui-li-count {
-	-webkit-border-radius: .25em /*{global-radii-buttons}*/;
-	border-radius: .25em /*{global-radii-buttons}*/;
+	-webkit-border-radius: .25em ; /*{global-radii-buttons}*/
+	border-radius: .25em; /*{global-radii-buttons}*/
 }
 /* Icon-only buttons */
 .ui-btn-icon-notext.ui-btn-corner-all,
 .ui-btn-icon-notext.ui-corner-all {
-	-webkit-border-radius: 1em;
-	border-radius: 1em;
+	-webkit-border-radius: 2em;
+	border-radius: 2em;
 }
 /* Radius clip workaround for cleaning up corner trapping */
 .ui-btn-corner-all,
@@ -119,10 +119,10 @@ label.ui-btn {
 }
 /* Popup arrow */
 .ui-popup.ui-corner-all > .ui-popup-arrow-guide {
-	left: .25em /*{global-radii-blocks}*/;
-	right: .25em /*{global-radii-blocks}*/;
-	top: .25em /*{global-radii-blocks}*/;
-	bottom: .25em /*{global-radii-blocks}*/;
+	left: .25em; /*{global-radii-blocks}*/
+	right: .25em; /*{global-radii-blocks}*/
+	top: .25em; /*{global-radii-blocks}*/
+	bottom: .25em; /*{global-radii-blocks}*/
 }
 /* Shadow
 -----------------------------------------------------------------------------------------------------------*/
@@ -148,8 +148,8 @@ label.ui-btn {
 .ui-btn-icon-top:after,
 .ui-btn-icon-bottom:after,
 .ui-btn-icon-notext:after {
-	background-color: #666666 /*{global-icon-color}*/;
-	background-color: rgba(0,0,0,.4) /*{global-icon-disc}*/;
+	background-color: #4b7333; /*{global-icon-color}*/
+	background-color: rgba(75,115,51,.4); /*{global-icon-disc}*/
 	background-position: center center;
 	background-repeat: no-repeat;
 	-webkit-border-radius: 1em;
@@ -162,8 +162,8 @@ html .ui-alt-icon.ui-checkbox-off:after,
 html .ui-alt-icon.ui-radio-off:after,
 html .ui-alt-icon .ui-checkbox-off:after,
 html .ui-alt-icon .ui-radio-off:after {
-	background-color: #666666 /*{global-icon-color}*/;
-	background-color: 					rgba(0,0,0,.15);
+	background-color: #4b7333; /*{global-icon-color}*/
+	background-color: 					rgba(75,115,51,.15);
 }
 /* No disc */
 .ui-nodisc-icon.ui-btn:after,
@@ -173,9 +173,9 @@ html .ui-alt-icon .ui-radio-off:after {
 /* Icon shadow */
 .ui-shadow-icon.ui-btn:after,
 .ui-shadow-icon .ui-btn:after {
-	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.4) /*{global-icon-shadow}*/;
-	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.4) /*{global-icon-shadow}*/;
-	box-shadow: 0 1px 0 rgba(255,255,255,.4) /*{global-icon-shadow}*/;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.4); /*{global-icon-shadow}*/
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.4); /*{global-icon-shadow}*/
+	box-shadow: 0 1px 0 rgba(255,255,255,.4); /*{global-icon-shadow}*/
 }
 /* Checkbox and radio */
 .ui-btn.ui-checkbox-off:after,
