@@ -751,7 +751,7 @@ html .ui-panel-page-container-d {
 html .ui-bar-d a,
 html .ui-body-d a,
 html body .ui-group-theme-d a {
-	color: #3388cc /*{d-link-color}*/;
+	color: #95c066 /*{d-link-color}*/;
 	font-weight: bold;
 }
 .ui-page-theme-d a:visited,
@@ -764,13 +764,13 @@ html body .ui-group-theme-d a:visited {
 html .ui-bar-d a:hover,
 html .ui-body-d a:hover,
 html body .ui-group-theme-d a:hover {
-	color: #005599 /*{d-link-hover}*/;
+	color: #95c066 /*{d-link-hover}*/;
 }
 .ui-page-theme-d a:active,
 html .ui-bar-d a:active,
 html .ui-body-d a:active,
 html body .ui-group-theme-d a:active {
-	color: #005599 /*{d-link-active}*/;
+	color: #95c066 /*{d-link-active}*/;
 }
 /* Button up */
 .ui-page-theme-d .ui-btn,
@@ -835,8 +835,8 @@ html .ui-bar-d .ui-slider-track .ui-btn-active,
 html .ui-body-d .ui-slider-track .ui-btn-active,
 html body .ui-group-theme-d .ui-slider-track .ui-btn-active,
 html body div.ui-slider-track.ui-body-d .ui-btn-active {
-	background-color: #3388cc /*{d-active-background-color}*/;
-	border-color: #1c4a70 /*{d-active-border}*/;
+	background-color: #4b7333 /*{d-active-background-color}*/;
+	border-color: #95c066 /*{d-active-border}*/;
 	color: #ffffff /*{d-active-color}*/;
 	text-shadow: 0 /*{d-active-shadow-x}*/ 1px /*{d-active-shadow-y}*/ 0 /*{d-active-shadow-radius}*/ #005599 /*{d-active-shadow-color}*/;
 }
@@ -846,7 +846,7 @@ html .ui-bar-d .ui-radio-on:after,
 html .ui-body-d .ui-radio-on:after,
 html body .ui-group-theme-d .ui-radio-on:after,
 .ui-btn.ui-radio-on.ui-btn-d:after {
-	border-color: #3388cc /*{d-active-background-color}*/;
+	border-color: #95c066 /*{d-active-background-color}*/;
 }
 /* Focus */
 .ui-page-theme-d .ui-btn:focus,
@@ -861,7 +861,7 @@ html .ui-body-d .ui-focus,
 html body .ui-group-theme-d .ui-focus,
 html head + body .ui-btn-d.ui-focus,
 html head + body .ui-body-d.ui-focus {
-	-webkit-box-shadow: 0 0 12px #3388cc /*{d-active-background-color}*/;
+	-webkit-box-shadow: 0 0 12px #95c066 /*{d-active-background-color}*/;
 	-moz-box-shadow: 0 0 12px #3388cc /*{d-active-background-color}*/;
 	box-shadow: 0 0 12px #3388cc /*{d-active-background-color}*/;
 }
