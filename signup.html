@@ -19,31 +19,19 @@
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
 </head>
-<style type="test/css">
-	.[data-role=footer]{
-		bottom:0;
-		right:0;
-		top:auto! important ;
-		position:absolute !important; 
-	} 
-	.[data-role=header]{
-		top:0; 
-		position:absolute !important; 
-		bottom: auto !important;
-	}
-</style>
+
 <body>
 	<div data-role="page" id="home">  
 		<div data-position="fixed" data-role="header" data-theme="b">  
 			<!-- <a data-icon="home" data-iconpos="notext" rel="external" href="home.html">Home</a>  --> 
 			<h1>Boulder Food Rescue</h1>  
 		</div> 
-		<div style="margin: 15px;">
-			<h1>Create An Account</h1>
+		<div style="margin: 15px; font-family: 'Corbel'; font-weight: normal;">
+			<h1><center>Create An Account</center></h1>
 		</div>
 		<form id="HLogin" method="POST">  
 			<div style="margin: 15px;" data-role="fieldcontain">  
-				<label for="url">Username:</label>  
+				<label for="url"><center>Username:</center></label>  
 				<input class="required" id="Lusername" name="uid_r" value="" type="text">            
 			</div>  
 			<div style="margin: 15px;" data-role="fieldcontain">  
@@ -51,7 +39,7 @@
 				<input id="Lpassword" name="pwd_r" value="" type="password">            
 			</div>  
 			<div style="margin: 15px;" data-role="fieldcontain">  
-				<label for="url">Confirm Password:</label>  
+				<label for="url"><center>Confirm Password:</center></label>  
 				<input id="Lpassword" name="pwd_r" value="" type="password">            
 			</div> 
 			<!-- <center><a rel="external" href="index.html" data-role="button" data-theme="b" data-inline="true">Create Account</a></center> -->
