@@ -37,21 +37,21 @@
 				Home
 			</a>  
 			<h1>
-				Boulder Food Rescue
+				Food Rescue Robot
 			</h1> 
 			<a rel="external"data-icon="power" data-iconpos="notext" href="index.html">
 				Log Out
 			</a>
 		</div> 
 		<h3>
-			<div style="font-family: 'Corbel'; font-weight: normal;">
+			<div style="margin: 15px; font-family: 'Corbel'; font-weight: normal; border-bottom: 1px solid #c5c5c5 !important;">
 				<center>
 					Edit Pick Up Report
 				</center>
 			</div>
 		</h3>
-		<div class="div_dim">
-			<label for="name">Date:</label>
+		<div class="field_title" data-role="fieldcontain">
+			<label style="color: #DB5432;" for="name">Date:</label>
 			<input class="date_picker" name="mydate" id="mydate" type="date" data-theme="b" data-role="datebox" data-options='{"mode": "flipbox"}'>
 		</div>
 
@@ -104,14 +104,16 @@
 				<option value="sun">Recipient 7</option>
 			</select>
 		</div>
-		<div style="font-family: 'Corbel'; font-weight: normal;">
-			<h3>
-				<center>
-					Data
-				</center>
-			</h3>	
+		<div class="section_div">
+			<center>
+				Data
+			</center>
 		</div>
-		<center>Enter the weight/count for each food type</center>
+		<div class="info_div">
+			<center>
+				Enter the weight/count for each food type
+			</center>
+		</div>
 		<div class="div_dim">
 			<select style="" class="drop_button" name="produce" id="produce" >
 				<option>Produce</option>
@@ -126,17 +128,17 @@
 		</div>
 
 		<div class="field_title" data-role="fieldcontain">
-			<label for="name">Weight:</label>
+			<label style="color: #DB5432; font: arial, sans-serif;" for="name">Weight:</label>
 			<input type="text" name="name" id="name" value=""  />
 		</div>
 
 		<div class="field_title" data-role="fieldcontain">
-			<label for="name">Count:</label>
+			<label style="color: #DB5432; font: arial, sans-serif;" for="name">Count:</label>
 			<input type="text" name="name" id="name" value=""  />
 		</div>
 
 		<div class="field_title" data-role="fieldcontain">
-			<label for="name">Description:</label>
+			<label style="color: #DB5432; font: arial, sans-serif;" for="name">Description:</label>
 			<input type="text" name="name" id="name" value=""  />
 		</div>
 		<div class="div_dim">
@@ -166,15 +168,20 @@
 		</div>
 
 		<div class="field_title" data-role="fieldcontain">
-			<label for="textarea">Notes:</label>
+			<label style="color: #DB5432; font: arial, sans-serif;" for="textarea">
+				Notes:
+			</label>
 			<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
 
 		</div>
 		<div class="field_title" data-role="fieldcontain">
  			<fieldset data-role="controlgroup">
-				<legend>Flag for Admin:</legend>
+				<label style="color: #DB5432; font: arial, sans-serif;" for="checkbox-1">
+					Flag for Admin:
+				</label>
 				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
     		</fieldset>
+
 		</div>
  
 

@@ -4,6 +4,27 @@
 	margin: 0.6em 10% 0.8em !important;
 }
 
+/* Sections
+-----------------------------------------------------------------------------------------------------------*/
+.section_div {
+	margin: 15px; 
+	font-size: 20px;
+	font-family: 'Helvetica'; 
+	font-weight: normal; 
+	border-bottom: 1px solid #dddddd !important; 
+	font-weight: normal; 
+	margin-top: 30px; 
+	border-top: 1px solid #dddddd !important;
+	padding-bottom: 8px !important;
+	padding-top: 8px !important;
+}
+
+.info_div {
+	font-family: 'Droid Sans', sans-serif;
+	margin-top: 20px; 
+	padding-bottom: 0px !important;
+}
+
 
 /* Font
 -----------------------------------------------------------------------------------------------------------*/
@@ -48,3 +69,6 @@ input.bigCheckbox {
 	height: 40px; 
 }
 
+.bb div, .bb td.bb th {
+    border-bottom: 1px solid gray !important;
+}
