@@ -6,7 +6,6 @@
 	<title>Boulder Food Rescue</title>
 	<link rel="stylesheet" href="themes/Bootstrap.css">
 	<link rel="stylesheet" href="themes/application.css">
-	
 	<script href="themes/js/boostrap-dropdown.js"></script>
 	<link rel="stylesheet" href="themes/css/boostrap_2-1-1.css">
 	<script href="themes/js/boostrap-dropdown_2-1-1.js"></script>
@@ -24,6 +23,40 @@
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
 </head>
+<style type="text/css">
+	.field_title {
+		margin: 12px; 
+		color: black;
+	}
+	div.inputdata{
+		border:thin solid gray;
+		padding:0.1em;
+		margin:0.1em;
+	}
+
+    div.inputdata label{
+	    float:left;
+	    margin-right:15px;
+	    /*padding:5px 0;*/
+	    /*color:gray;*/
+    }
+
+    div.inputdata span{
+	    display: block;
+	    overflow: hidden;
+    }
+
+    div.inputdata input{
+	    width:100%;
+	    /*padding-top:8px;*/
+	    border:none;
+	    background:none;
+    }
+
+    .clear {
+    	clear: both; 
+    }
+</style>
 <body>
 	<div data-role="page" id="home">  
 		<div data-position="fixed" data-role="header" data-theme="a">  
@@ -37,24 +70,33 @@
 				Log Out
 			</a>
 		</div>
-		<h1>Todays Routes</h1>
-		<h3>Shift 1</h3>
-		<table style="width:200px">
+		<h3>
+			<div style="margin: 15px; color: #4a4a4a; font:20px/1.5 'Trebuchet MS', Arial; border-bottom: 1px solid #c5c5c5 !important;">
+				<center>
+					Today's Routes
+				</center>
+			</div>
+		</h3>
+		<div class="field_title" data-role="fieldcontain">
+			<label style="color: #DB5432; font: 20px/1 'Trebuchet MS', Arial;" for="name">Shift 1</label>
+		</div>
+		<table class="field_title" style="color: #4a4a4a; 
+		font:15px/1.5 'Trebuchet MS', Arial;">
 			<tr>
 				<td>Donor</td>
-				<td>xxx</td>		
+				<td>XXX</td>		
 			</tr>
 			<tr>
 				<td>Recipient</td>
-				<td>xxx</td>		
+				<td>XXX</td>		
 			</tr>
 			<tr>
 				<td>Volunteers</td>
-				<td>xxx</td>		
+				<td>XXX</td>		
 			</tr>
 			<tr>
 				<td>Time Frame</td>
-				<td>xxx</td>		
+				<td>XXX</td>		
 			</tr>
 		</table>
 

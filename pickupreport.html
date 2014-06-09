@@ -32,6 +32,34 @@
 		margin: 12px; 
 		color: black;
 	}
+	div.inputdata{
+		border:thin solid gray;
+		padding:0.1em;
+		margin:0.1em;
+	}
+
+    div.inputdata label{
+	    float:left;
+	    margin-right:15px;
+	    /*padding:5px 0;*/
+	    /*color:gray;*/
+    }
+
+    div.inputdata span{
+	    display: block;
+	    overflow: hidden;
+    }
+
+    div.inputdata input{
+	    width:100%;
+	    /*padding-top:8px;*/
+	    border:none;
+	    background:none;
+    }
+
+    .clear {
+    	clear: both; 
+    }
 </style>
 <body>
 	<div data-role="page" id="pickup">  
@@ -198,6 +226,7 @@
 			<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
 
 		</div>
+
 		<div class="field_title" data-role="fieldcontain">
 			<fieldset data-role="controlgroup">
 				<label style="color: #DB5432; font: 15px/1 'Trebuchet MS', Arial;" for="checkbox-1">
@@ -208,6 +237,12 @@
 
 		</div> 
 
+		<!-- <div class="field_title" data-role="fieldcontain">
+				<label style="color: #DB5432; font: 15px/1 'Trebuchet MS', Arial;" for="checkbox-1">
+					Flag for Admin:
+				</label>
+				<input style="width: 13px;" type="checkbox" name="checkbox-1" id="checkbox-1" />
+		</div> -->
 		<!-- <center>
 			<a rel="external" href="home.html" data-role="button" data-theme="b" data-inline="true">Save Changes
 			</a>
