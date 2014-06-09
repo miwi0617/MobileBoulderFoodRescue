@@ -47,10 +47,10 @@
     <gap:splash src="img/splash/ios/splash2048x1496.png" gap:platform="ios" width="2048" height="1496" /> <!-- iPad retina -->
     <gap:splash src="img/splash/ios/splash1536x2008.png" gap:platform="ios" width="1536" height="2008" /> <!-- iPad retina -->
         
-    <gap:splash src="img/splash/android/bfrldpi.png" gap:platform="android" gap:density="ldpi" /> <!-- 200x320 -->
-    <gap:splash src="img/splash/android/bfrmdpi.png" gap:platform="android" gap:density="mdpi" /> <!-- 320x480 -->
-    <gap:splash src="img/splash/android/bfrhdpi.png" gap:platform="android" gap:density="hdpi" /> <!-- 480x800 -->
-    <gap:splash src="img/splash/android/bfrxhdpi.png" gap:platform="android" gap:density="xhdpi" /> <!-- 720x1280 -->
+    <gap:splash src="img/splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" /> <!-- 200x320 -->
+    <gap:splash src="img/splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" /> <!-- 320x480 -->
+    <gap:splash src="img/splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" /> <!-- 480x800 -->
+    <gap:splash src="img/splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" /> <!-- 720x1280 -->
         
     <gap:splash src="img/splash/winphone/splash.jpg" gap:platform="winphone" /> <!-- Windows Phone 7 480x800 -->
 
