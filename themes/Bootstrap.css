@@ -786,7 +786,7 @@ html body .ui-group-theme-d .ui-btn:visited,
 html head + body .ui-btn.ui-btn-d:visited {
 	background: #51A351 /*{d-bup-background-color}*/;
 	border-color: #00a84c /*{d-bup-border}*/;
-	color: #ffffff /*{d-bup-color}*/;
+	color: #51A351 /*{d-bup-color}*/;
 	text-shadow: undefined /*{d-bup-shadow-x}*/ undefined /*{d-bup-shadow-y}*/ undefined /*{d-bup-shadow-radius}*/ undefined /*{d-bup-shadow-color}*/;
 }
 /* Button hover */
@@ -797,7 +797,7 @@ html body .ui-group-theme-d .ui-btn:hover,
 html head + body .ui-btn.ui-btn-d:hover {
 	background: #5BB75B /*{d-bhover-background-color}*/;
 	border-color: #00a84c /*{d-bhover-border}*/;
-	color: #ffffff /*{d-bhover-color}*/;
+	color: #5BB75B /*{d-bhover-color}*/;
 	text-shadow: undefined /*{d-bhover-shadow-x}*/ undefined /*{d-bhover-shadow-y}*/ undefined /*{d-bhover-shadow-radius}*/ undefined /*{d-bhover-shadow-color}*/;
 }
 /* Button down */
@@ -808,7 +808,7 @@ html body .ui-group-theme-d .ui-btn:active,
 html head + body .ui-btn.ui-btn-d:active {
 	background: #51a451 /*{d-bdown-background-color}*/;
 	border-color: #00a84c /*{d-bdown-border}*/;
-	color: #ffffff /*{d-bdown-color}*/;
+	color: #51a451 /*{d-bdown-color}*/;
 	text-shadow: undefined /*{d-bdown-shadow-x}*/ undefined /*{d-bdown-shadow-y}*/ undefined /*{d-bdown-shadow-radius}*/ undefined /*{d-bdown-shadow-color}*/;
 }
 /* Active button */
@@ -837,7 +837,7 @@ html body .ui-group-theme-d .ui-slider-track .ui-btn-active,
 html body div.ui-slider-track.ui-body-d .ui-btn-active {
 	background-color: #4b7333 /*{d-active-background-color}*/;
 	border-color: #95c066 /*{d-active-border}*/;
-	color: #ffffff /*{d-active-color}*/;
+	color: #4b7333 /*{d-active-color}*/;
 	text-shadow: 0 /*{d-active-shadow-x}*/ 1px /*{d-active-shadow-y}*/ 0 /*{d-active-shadow-radius}*/ #95c066 /*{d-active-shadow-color}*/;
 }
 /* Active radio button icon */
