@@ -3,6 +3,7 @@ $('#reposHome').bind('pageinit', function(event) {
 });
 
 function loadRepos() {
+    // Obvi not the right database...
     $.ajax("https://api.github.com/legacy/repos/search/javascript").done(function(data) {
         var i, repo;
         $.each(data.repositories, function (i, repo) {
