@@ -34,15 +34,27 @@
 		</div>  
 		<div data-role="content" id="contentConfirmation" name="contentConfirmation" align="center">  
 			<h1 style="color: #4a4a4a; font:30px/1.5 'Trebuchet MS', Arial;">Log In</h1>  
-			<form id="HLogin" method="POST">  
+			<form id="loginForm" method="POST">  
 				<div data-role="fieldcontain">  
 					<label style="color: #4a4a4a; font:15px/1.5 'Trebuchet MS', Arial;" for="url">Username:</label>  
 					<input class="required" id="Lusername" name="uid_r" value="" type="text">            
 				</div>  
+
+				<div data-role="fieldcontain" class="ui-hide-label">
+					<label for="email">Email:</label>
+					<input type="text" name="email" id="email" value="" placeholder="Email" />
+				</div>
+
 				<div data-role="fieldcontain">  
 					<label style="color: #4a4a4a; font:15px/1.5 'Trebuchet MS', Arial;" for="url">Password:</label>  
 					<input id="Lpassword" name="pwd_r" value="" type="password">            
 				</div> 
+
+				<div data-role="fieldcontain" class="ui-hide-label">
+					<label for="password">Password:</label>
+					<input type="password" name="password" id="password" value="" placeholder="Password" />
+				</div>
+
 				<div class="div_dim">
 					<a rel="external" href="home.html" data-role="button" data-theme="d" data-inline="false">
 						<span class="ui-btn-inner ui-btn-corner-all">
@@ -52,7 +64,9 @@
 						</span>
 					</a>
 				</div>
-		
+
+				<input type="submit" value="Login" id="submitButton">
+
 				<a style="font-weight: 200;" href="signup.html" data-inline="false">
 					<span class="ui-btn-inner ui-btn-corner-all">
 						<span class="ui-btn-text">
@@ -69,19 +83,33 @@
 					</span>
 				</a>
 			</form> 
-		</div>  
+		</div> 
 
-        
+		
+		<select class="drop_button" name="transportedwith" id="transportedwith">
+			<option>Transported With</option>
+			<option value="1">Quantum Tunneling</option>
+			<option value="2">The 10 Dimensions</option>
+			<option value="3">Syn</option>
+			<option value="4">X-Men</option>
+			<option value="5">Buddah</option>
+			<option value="6">A Magic Carpet Ride</option>
+			<option value="7">A Smile</option>
+		</select>
+
+
 		<h4>GitHub Test Search Filter</h4>
-        
-        <div data-role="content">
-            <ul id="allRepos" data-role="listview" data-filter="true">
-            </ul>
-        </div>
-    </div>
+
+		<div data-role="content">
+			<ul id="allRepos" data-role="listview" data-filter="true">
+			</ul>
+		</div>
 
 
-    <!-- End of page so it gets loaded last -->
-    <script type="text/javascript" src="js/index.js"></script>
+	</div>
+
+
+	<!-- End of page so it gets loaded last -->
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
