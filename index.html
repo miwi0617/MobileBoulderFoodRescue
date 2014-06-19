@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="themes/application.css">
 	
 	<script href="themes/js/boostrap-dropdown.js"></script>
-	<link rel="stylesheet" href="themes/css/boostrap_2-1-1.css">
 	<script href="themes/js/boostrap-dropdown_2-1-1.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -23,6 +22,31 @@
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+    <script>
+        $(function () {
+            //$('.employee').unbind().on("click", function () {
+            $("#loginForm").on("submit", function (y) {
+                //disable the button so we can't resubmit while we wait
+                $("#submitButton", this).attr("disabled", "disabled");
+                var e = $("#email").val();
+                var p = $("#password").val();
+                $.ajax({
+                    type: "POST",
+                    url: "http://dev.boulderfoodrescue.org/volunteers/sign_in.json?email="+e+"&password="+p,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "jsonp",
+                    success: function (msg) {
+                        window.location = ("home.html");
+                    },
+                    error: function (msg) {
+                        alert(msg.statusText);
+                    }
+                });
+                $("#submitButton").removeAttr("disabled");
+            });
+        });
+        
+    </script>
 </head>
 <body onload="init()">
 	<div data-role="page" id="reposHome">  
@@ -34,7 +58,7 @@
 		</div>  
 		<div data-role="content" id="contentConfirmation" name="contentConfirmation" align="center">  
 			<h1 style="color: #4a4a4a; font:30px/1.5 'Trebuchet MS', Arial;">Log In</h1>  
-			<form id="loginForm">  
+			<form id="loginForm" method="post">  
 				<!-- <div data-role="fieldcontain">  
 					<label style="color: #4a4a4a; font:15px/1.5 'Trebuchet MS', Arial;" for="url">Username:</label>  
 					<input class="required" id="Lusername" name="uid_r" value="" type="text">            
