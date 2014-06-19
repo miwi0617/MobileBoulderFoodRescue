@@ -43,8 +43,9 @@ function deviceReady() {
 }
 
 function myFunction() {
-    $.post("http://dev.boulderfoodrescue.org/volunteers/sign_in.json", {email:e,password:p}, function(data) {
+    $.post("http://dev.boulderfoodrescue.org/volunteers/sign_in.json", {email:"julia@dragondev.com",password:"dr@g0ndream"}, function(data) {
             if(data == true) {
+                alert("Your login succeeded");
                 window.location = ("home.html");
             } else {
                 alert("Your login failed");
