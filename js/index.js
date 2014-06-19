@@ -43,7 +43,13 @@ function deviceReady() {
 }
 
 function myFunction() {
-    alert("Hello! I am an alert box!");
+    $.post("http://dev.boulderfoodrescue.org/volunteers/sign_in.json", {email:e,password:p}, function(data) {
+            if(data == true) {
+                window.location = ("home.html");
+            } else {
+                alert("Your login failed");
+            }
+        }
     // window.location = ("home.html");
     // $.mobile.changePage("home.html");
 }
