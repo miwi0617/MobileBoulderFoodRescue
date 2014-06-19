@@ -28,11 +28,11 @@ function deviceReady() {
     var e = $("#email", this).val();
     var p = $("#password", this).val();
     if(e != '' && p!= '') {
-        $.post("http://dev.boulderfoodrescue.org/volunteers/sign_in.json", {email:e,password:p}, function(res) {
-            if(res == true) {
-                $.mobile.changePage("home.html");
+        $.post("http://dev.boulderfoodrescue.org/volunteers/sign_in.json", {email:e,password:p}, function(data) {
+            if(data == true) {
+                window.location = ("home.html");
             } else {
-                navigator.notification.alert("Your login failed", function() {});
+                alert("Your login failed");
             }
             $("#submitButton").removeAttr("disabled");
         },"json");
@@ -40,4 +40,10 @@ function deviceReady() {
     return false;
 });
 
+}
+
+function myFunction() {
+    // alert("Hello! I am an alert box!");
+    window.location = ("home.html");
+    // $.mobile.changePage("home.html");
 }
