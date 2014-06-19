@@ -43,7 +43,8 @@ function deviceReady() {
 }
 
 function myFunction() {
-    $.post("http://dev.boulderfoodrescue.org/volunteers/sign_in.json", {email:"julia@dragondev.com",password:"dr@g0ndream"}, function(data) {
+    alert("You failed");
+    $.post("http://dev.boulderfoodrescue.org/volunteers/sign_in.json?email=julia@dragondev.com&password=dr@g0ndream", function(data) {
             if(data == true) {
                 alert("Your login succeeded");
                 window.location = ("home.html");
