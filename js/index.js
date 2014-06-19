@@ -43,7 +43,7 @@ function deviceReady() {
 }
 
 function myFunction() {
-    // alert("Hello! I am an alert box!");
-    window.location = ("home.html");
+    alert("Hello! I am an alert box!");
+    // window.location = ("home.html");
     // $.mobile.changePage("home.html");
 }
