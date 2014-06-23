@@ -34,7 +34,9 @@
                     type: "POST",
                     url: "http://dev.boulderfoodrescue.org/volunteers/sign_in.json",
                     data: { email: e, password: p },
-                    success: function (msg) {
+                    success: function (data) {
+                        window.sessionStorage.token = data.authentication_token;
+                        window.sessionStorage.email = e;
                         window.location = ("home.html");
                     },
                     error: function (msg) {

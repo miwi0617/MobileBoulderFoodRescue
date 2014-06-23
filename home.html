@@ -23,6 +23,27 @@
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+    <script>
+        $(function () {
+            //$('.employee').unbind().on("click", function () {
+            $("a").on("click", function (y) {
+                //disable the button so we can't resubmit while we wait
+                $.ajax({
+                    type: "GET",
+                    url: "http://dev.boulderfoodrescue.org/logs/mine_past.json",
+                    data: {volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token},
+                    success: function (data) {
+                        var minePastData =  data;
+               
+                    },
+                    error: function (msg) {
+                        alert( msg );
+                    }
+                });
+            });
+        });
+        
+    </script>
 </head>
 <body>
 	<div data-role="page" id="home">  
@@ -52,6 +73,19 @@
 				</span>
 			</a>
 		</div> 
+
+
+
+
+        <div style="margin: 15px">
+			<a data-role="button" data-theme="c" data-inline="false">
+				<span class="ui-btn-inner ui-btn-corner-all">
+					<span class="main_button">
+						DELETE ME
+					</span>
+				</span>
+			</a>
+		</div>
 	</div>
 </body>
 </html>
