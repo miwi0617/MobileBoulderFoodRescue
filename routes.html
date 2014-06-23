@@ -22,6 +22,37 @@
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	<script>
+		$(function () {
+            //$('.employee').unbind().on("click", function () {
+        	$.ajax({
+        		type: "GET",
+        		url: "http://dev.boulderfoodrescue.org/logs/mine_upcoming.json",
+        		data: {volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token},
+        		success: function (data) {
+        			// var test =  data[0].id;
+        			// document.getElementById("demo").innerHTML = test;
+
+        			// var when =  data[0].when;
+        			// document.getElementById("date").innerHTML = when;
+        			if(data[0])
+        			{
+        				populateShiftData(data[0]);
+        			}
+
+        		},
+        		error: function (msg) {
+        			alert( msg );
+        		}
+        	});
+        });
+
+		function populateShiftData(data){
+			$('#date').html(data.when);
+			$('#demo').html(data.id);
+		}
+
+	</script>
 </head>
 <style type="text/css">
 	.field_title {
@@ -34,28 +65,28 @@
 		margin:0.1em;
 	}
 
-    div.inputdata label{
-	    float:left;
-	    margin-right:15px;
-	    /*padding:5px 0;*/
-	    /*color:gray;*/
-    }
+	div.inputdata label{
+		float:left;
+		margin-right:15px;
+		/*padding:5px 0;*/
+		/*color:gray;*/
+	}
 
-    div.inputdata span{
-	    display: block;
-	    overflow: hidden;
-    }
+	div.inputdata span{
+		display: block;
+		overflow: hidden;
+	}
 
-    div.inputdata input{
-	    width:100%;
-	    /*padding-top:8px;*/
-	    border:none;
-	    background:none;
-    }
+	div.inputdata input{
+		width:100%;
+		/*padding-top:8px;*/
+		border:none;
+		background:none;
+	}
 
-    .clear {
-    	clear: both; 
-    }
+	.clear {
+		clear: both; 
+	}
 </style>
 <body>
 	<div data-role="page" id="home">  
@@ -82,24 +113,24 @@
 		</div>
 		<table class="field_title" style="color: #4a4a4a; 
 		font:15px/1.5 'Trebuchet MS', Arial;">
-			<tr>
-				<td>Donor</td>
-				<td>XXX</td>		
-			</tr>
-			<tr>
-				<td>Recipient</td>
-				<td>XXX</td>		
-			</tr>
-			<tr>
-				<td>Volunteers</td>
-				<td>XXX</td>		
-			</tr>
-			<tr>
-				<td>Time Frame</td>
-				<td>XXX</td>		
-			</tr>
-		</table>
+		<tr>
+			<td>Donor</td>
+			<td>XXX</td>		
+		</tr>
+		<tr>
+			<td>Recipient</td>
+			<td>XXX</td>		
+		</tr>
+		<tr>
+			<td>Volunteers</td>
+			<td id="demo"></td>		
+		</tr>
+		<tr>
+			<td>Time Frame</td>
+			<td id="date"></td>		
+		</tr>
+	</table>
 
-	</div>
+</div>
 </body>
 </html>
