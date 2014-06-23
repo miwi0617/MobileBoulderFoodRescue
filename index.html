@@ -32,14 +32,13 @@
                 var p = $("#password").val();
                 $.ajax({
                     type: "POST",
-                    url: "http://dev.boulderfoodrescue.org/volunteers/sign_in.json?email="+e+"&password="+p,
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "jsonp",
+                    url: "http://dev.boulderfoodrescue.org/volunteers/sign_in.json",
+                    data: { email: e, password: p },
                     success: function (msg) {
                         window.location = ("home.html");
                     },
                     error: function (msg) {
-                        alert(msg.statusText);
+                        var newAttachments = eval("(" + msg + ")");
                     }
                 });
                 $("#submitButton").removeAttr("disabled");
@@ -58,7 +57,7 @@
 		</div>  
 		<div data-role="content" id="contentConfirmation" name="contentConfirmation" align="center">  
 			<h1 style="color: #4a4a4a; font:30px/1.5 'Trebuchet MS', Arial;">Log In</h1>  
-			<form id="loginForm" method="post">  
+			<form id="loginForm" >  
 				<!-- <div data-role="fieldcontain">  
 					<label style="color: #4a4a4a; font:15px/1.5 'Trebuchet MS', Arial;" for="url">Username:</label>  
 					<input class="required" id="Lusername" name="uid_r" value="" type="text">            
