@@ -30,7 +30,7 @@
 -----------------------------------------------------------------------------------------------------------*/
 .main_button {
 	font-size: 16px;
-	color: grey;
+	color: white;
 	font-family: Helvetica, sans-serif;
 	font-weight: 200;
 }
@@ -44,7 +44,7 @@
 
 .drop_button {
 	font-size: 16px;
-	color: grey;
+	color: white;
 	font-family: Helvetica, sans-serif;
 	height: 40px;
 	/*vertical-align: middle;*/
