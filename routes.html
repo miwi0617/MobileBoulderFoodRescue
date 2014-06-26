@@ -30,6 +30,7 @@
         		url: "http://dev.boulderfoodrescue.org/logs/mine_upcoming.json",
         		data: {volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token},
         		success: function (data) {
+        			alert(JSON.stringify(data));
         			// var test =  data[0].id;
         			// document.getElementById("demo").innerHTML = test;
 
