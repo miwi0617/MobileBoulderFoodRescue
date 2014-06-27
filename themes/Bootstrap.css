@@ -23,7 +23,7 @@ textarea,
 button,
 .ui-btn {
 	font-size: 1em;
-	line-height: 1.3;
+	line-height: 1.8;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; /*{global-font-family}*/
 	
 }
@@ -296,7 +296,7 @@ html body .ui-group-theme-a .ui-btn:visited,
 html head + body .ui-btn.ui-btn-a:visited {
 	background: #51A351 /*{a-bup-background-color}*/;
 	border-color: #00a84c /*{a-bup-border}*/;
-	color: #ffffff /*{a-bup-color}*/;
+	color: #FFFFFF /*{a-bup-color}*/;
 	text-shadow: undefined /*{a-bup-shadow-x}*/ undefined /*{a-bup-shadow-y}*/ undefined /*{a-bup-shadow-radius}*/ undefined /*{a-bup-shadow-color}*/;
 }
 /* Button hover */
@@ -307,7 +307,7 @@ html body .ui-group-theme-a .ui-btn:hover,
 html head + body .ui-btn.ui-btn-a:hover {
 	background: #5BB75B /*{a-bhover-background-color}*/;
 	border-color: #00a84c /*{a-bhover-border}*/;
-	color: #ffffff /*{a-bhover-color}*/;
+	color: #333333 /*{a-bhover-color}*/;
 	text-shadow: undefined /*{a-bhover-shadow-x}*/ undefined /*{a-bhover-shadow-y}*/ undefined /*{a-bhover-shadow-radius}*/ undefined /*{a-bhover-shadow-color}*/;
 }
 /* Button down */
@@ -318,7 +318,7 @@ html body .ui-group-theme-a .ui-btn:active,
 html head + body .ui-btn.ui-btn-a:active {
 	background: #51a451 /*{a-bdown-background-color}*/;
 	border-color: #00a84c /*{a-bdown-border}*/;
-	color: #ffffff /*{a-bdown-color}*/;
+	color: #333333 /*{a-bdown-color}*/;
 	text-shadow: undefined /*{a-bdown-shadow-x}*/ undefined /*{a-bdown-shadow-y}*/ undefined /*{a-bdown-shadow-radius}*/ undefined /*{a-bdown-shadow-color}*/;
 }
 /* Active button */
@@ -347,7 +347,7 @@ html body .ui-group-theme-a .ui-slider-track .ui-btn-active,
 html body div.ui-slider-track.ui-body-a .ui-btn-active {
 	background-color: #d6d6d6 /*{a-active-background-color}*/;
 	border-color: #95c066 /*{a-active-border}*/;
-	color: #ffffff /*{a-active-color}*/;
+	color: #333333 /*{a-active-color}*/;
 	text-shadow: 0 /*{a-active-shadow-x}*/ 1px /*{a-active-shadow-y}*/ 0 /*{a-active-shadow-radius}*/ #005599 /*{a-active-shadow-color}*/;
 }
 /* Active radio button icon */

@@ -23,7 +23,7 @@
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
-    <script>
+	<script>
     //     $(function () {
     //         //$('.employee').unbind().on("click", function () {
     //         $("a").on("click", function (y) {
@@ -35,7 +35,7 @@
     //                 success: function (data) {
     //                 	alert(JSON.stringify(data));
     //                     var minePastData =  data;
-               
+
     //                 },
     //                 error: function (msg) {
     //                     alert( msg );
@@ -43,8 +43,25 @@
     //             });
     //         });
     //     });
-        
-    </script>
+
+</script>
+<script>
+	$(function () {
+		$("#logout").on("click",function() {
+			$.ajax({
+				type: "DELETE",
+				url: "http://dev.boulderfoodrescue.org/volunteers/sign_out.json",
+				success: function (data) {
+					alert("Logging Out");
+					window.location = ("index.html");
+				},
+				error: function(msg) {
+					alert(JSON.stringify(msg));
+				}
+			});
+		});
+	});
+</script>
 </head>
 <body>
 	<div data-role="page" id="home">  
@@ -54,7 +71,7 @@
 				Food Rescue Robot
 			</h1> 
 
-			<a style="background-color: rgba(75,115,51,0);" rel="external"data-icon="power" data-iconpos="notext" href="index.html">Log Out</a>
+			<a style="background-color: rgba(75,115,51,0);" rel="external"data-icon="power" id="logout" data-iconpos="notext">Log Out</a>
 		</div> 
 		<div style="margin: 15px">
 			<a rel="external" href="pickupreport.html" data-role="button" data-theme="c" data-inline="false">

@@ -27,7 +27,7 @@
             //$('.employee').unbind().on("click", function () {
         	$.ajax({
         		type: "GET",
-        		url: "http://dev.boulderfoodrescue.org/logs/mine_upcoming.json",
+        		url: "http://dev.boulderfoodrescue.org/logs/mine_past.json",
         		data: {volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token},
         		success: function (data) {
         			alert(JSON.stringify(data));
