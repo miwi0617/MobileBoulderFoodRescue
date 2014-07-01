@@ -15,17 +15,58 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 
-	<!-- DatePicker -->
 	<link rel="stylesheet" type="text/css" href="themes/jquery.mobile.min.css" />
 	
+	<!-- DatePicker -->
 	<link rel="stylesheet" type="text/css" href="themes/jqm-datebox.min.css" />
 
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+
+	<script>
+		$(function () {
+			$.ajax({
+				type: "GET",
+				url: "http://dev.boulderfoodrescue.org/logs/mine_upcoming.json",
+				data: {volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token},
+				success: function (data) {
+        			//alert(JSON.stringify(data));
+        			//alert(JSON.stringify(data[0].donor_id));
+        			alert(JSON.stringify(data));
+        			var data_id = (data.length-1);
+        			if((data[data_id]).id) {
+        				result = (data[data_id]).id;
+        				alert((data[data_id]).id);
+        			}
+
+        			$("#test").on("submit", function (y) {
+        				$("#submitButton", this).attr("disabled", "disabled");
+
+        				$.ajax({
+        					type: "PUT",
+        					url: "http://dev.boulderfoodrescue.org/logs/" + result + ".json",
+        					data: {volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token},
+        					success: function (data) {
+        						alert("success");
+        					},
+        					error: function (msg) {
+        						alert( JSON.stringify(msg) );
+        					}
+        				});
+        				$("#submitButton").removeAttr("disabled");
+        			});
+        		},
+        		error: function (msg) {
+        			alert( JSON.stringify(msg) );
+        		}
+        	});
+		});
+	</script>
+
 </head>
 <style type="text/css">
 	.field_title {
@@ -62,55 +103,56 @@
 	}
 </style>
 <body>
-	<div data-role="page" id="pickup">  
-		<div data-position="fixed" data-role="header" data-theme="a">  
-			<a style="background-color: rgba(75,115,51,0);" rel="external"data-icon="home" data-iconpos="notext" href="home.html">
-				Home
-			</a>  
-			<h1 style="font:13px/1.5 'Trebuchet MS' bold, Arial;">
-				Food Rescue Robot
-			</h1> 
-			<a style="background-color: rgba(75,115,51,0);" rel="external"data-icon="power" data-iconpos="notext" href="index.html">
-				Log Out
-			</a>
-		</div> 
-		<h3>
-			<div style="margin: 15px; color: #4a4a4a; font:20px/1.5 'Trebuchet MS', Arial; border-bottom: 1px solid #c5c5c5 !important;">
-				<center>
-					Edit Pick Up Report
-				</center>
+	<form id="test">
+		<div data-role="page" id="pickup">  
+			<div data-position="fixed" data-role="header" data-theme="a">  
+				<a style="background-color: rgba(75,115,51,0);" rel="external"data-icon="home" data-iconpos="notext" href="home.html">
+					Home
+				</a>  
+				<h1 style="font:13px/1.5 'Trebuchet MS' bold, Arial;">
+					Food Rescue Robot
+				</h1> 
+				<a style="background-color: rgba(75,115,51,0);" rel="external"data-icon="power" data-iconpos="notext" href="index.html">
+					Log Out
+				</a>
+			</div> 
+			<h3>
+				<div style="margin: 15px; color: #4a4a4a; font:20px/1.5 'Trebuchet MS', Arial; border-bottom: 1px solid #c5c5c5 !important;">
+					<center>
+						Edit Pick Up Report
+					</center>
+				</div>
+			</h3>
+			<div class="field_title" data-role="fieldcontain"> 
+				<label style="color: #DB5432; font:15px/1 'Trebuchet MS', Arial;" for="name">Date:</label>
+				<input class="date_picker" name="mydate" id="mydate" type="date" data-theme="b" data-role="datebox" data-options='{"mode": "flipbox"}'>
 			</div>
-		</h3>
-		<div class="field_title" data-role="fieldcontain"> 
-			<label style="color: #DB5432; font:15px/1 'Trebuchet MS', Arial;" for="name">Date:</label>
-			<input class="date_picker" name="mydate" id="mydate" type="date" data-theme="b" data-role="datebox" data-options='{"mode": "flipbox"}'>
-		</div>
 
-		<div class="div_dim">
-			<select class="drop_button" name="volunteers" id="volunteers">
-				<option>Volunteer</option>
-				<option value="1">Gretchen</option>
-				<option value="2">Merk</option>
-				<option value="3">Bawb</option>
-				<option value="4">Hollah</option>
-				<option value="5">Atcha</option>
-				<option value="6">Yolohonda</option>
-				<option value="7">Z</option>
-			</select>
-		</div>
+			<div class="div_dim">
+				<select class="drop_button" name="volunteers" id="volunteers">
+					<option>Volunteer</option>
+					<option value="1">Gretchen</option>
+					<option value="2">Merk</option>
+					<option value="3">Bawb</option>
+					<option value="4">Hollah</option>
+					<option value="5">Atcha</option>
+					<option value="6">Yolohonda</option>
+					<option value="7">Z</option>
+				</select>
+			</div>
 
-		<div class="div_dim">
-			<select class="drop_button" name="donor" id="donor">
-				<option>Donor</option>
-				<option value="1">Hall Fewds</option>
-				<option value="2">Whale Mart</option>
-				<option value="3">Targeh</option>
-				<option value="4">FWP</option>
-				<option value="5">Lambda</option>
-				<option value="6">U</option>
-				<option value="7">Queen Syndra</option>
-			</select>
-		</div>
+			<div class="div_dim">
+				<select class="drop_button" name="donor" id="donor">
+					<option>Donor</option>
+					<option value="1">Hall Fewds</option>
+					<option value="2">Whale Mart</option>
+					<option value="3">Targeh</option>
+					<option value="4">FWP</option>
+					<option value="5">Lambda</option>
+					<option value="6">U</option>
+					<option value="7">Queen Syndra</option>
+				</select>
+			</div>
 
 		<!-- <div class="div_dim">
 			<select class="drop_button" name="recipient" id="recipient" multiple="multiple" data-native-menu="false">
@@ -249,7 +291,7 @@
 			</a>
 		</center> -->
 
-		<div class="div_dim">
+<!-- 		<div class="div_dim">
 			<a rel="external" href="home.html" data-role="button" data-theme="d" data-inline="false">
 				<span class="ui-btn-inner ui-btn-corner-all">
 					<span class="ext_button">
@@ -257,8 +299,12 @@
 					</span>
 				</span>
 			</a>
-		</div> 
+		</div> --> 
+
+		<input type="submit" value="Save Changes" id="submitButton">
+
 	</div>
 </div>
+</form>
 </body>
 </html>
