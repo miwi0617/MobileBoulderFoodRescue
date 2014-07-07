@@ -45,11 +45,12 @@
 
         			$("#test").on("submit", function (y) {
         				$("#submitButton", this).attr("disabled", "disabled");
-
+        				alert(getFormData());
         				$.ajax({
         					type: "PUT",
         					url: "http://dev.boulderfoodrescue.org/logs/" + result + ".json",
-        					data: {volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token},
+        					data: {volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token
+        					},
         					success: function (data) {
         						alert("success");
         					},
@@ -65,7 +66,37 @@
         		}
         	});
 		});
-	</script>
+
+		function getFormData(){
+			var data = "";
+			var $textInputs = $("input:text");
+			for (i = 0; i < $textInputs.length; i++){
+				if($textInputs[i].value){
+					data += $textInputs[i].name +": " + $textInputs[i].value + ", ";
+				}
+			}
+			var $selectInputs = $("select");
+			for (i = 0; i < $selectInputs.length; i++){
+				if($selectInputs[i].value){
+					data += $selectInputs[i].name +": " + $selectInputs[i].value + ", ";
+				}
+			}
+			var $textAreaInputs = $("textarea");
+			for (i = 0; i < $textAreaInputs.length; i++){
+				if($textAreaInputs[i].value){
+					data += $textAreaInputs[i].name +": " + $textAreaInputs[i].value + ", ";
+				}
+			}
+			var $checkboxInputs = $("input:checkbox");
+			if ($checkboxInputs.is(":checked")) {
+				data += $checkboxInputs[0].name +": " + "true" + ",";
+			}
+			else {
+				data += $checkboxInputs[0].name + ": " + "false" + ",";
+			}
+			return data;
+		}
+		</script>
 
 </head>
 <style type="text/css">
@@ -125,7 +156,7 @@
 			</h3>
 			<div class="field_title" data-role="fieldcontain"> 
 				<label style="color: #DB5432; font:15px/1 'Trebuchet MS', Arial;" for="name">Date:</label>
-				<input class="date_picker" name="mydate" id="mydate" type="date" data-theme="b" data-role="datebox" data-options='{"mode": "flipbox"}'>
+				<input class="date_picker" name="when" id="mydate" type="date" data-theme="b" data-role="datebox" data-options='{"mode": "flipbox"}'>
 			</div>
 
 			<div class="div_dim">
@@ -218,22 +249,22 @@
 
 		<div class="field_title" data-role="fieldcontain">
 			<label style="color: #DB5432; font: 15px/1 'Trebuchet MS', Arial;" for="name">Weight:</label>
-			<input type="text" name="name" id="name" value=""  />
-			<label for="slider-1">Input slider:</label>
-			<input type="range" name="slider-1" id="slider-1" value="0" min="0" max="30" />
+			<input type="text" name="weight" id="name" value=""  />
+			<!-- <label for="slider-1">Input slider:</label>
+			<input type="range" name="slider" id="slider-1" value="0" min="0" max="30" /> -->
 		</div>
 
 		<div class="field_title" data-role="fieldcontain">
 			<label style="color: #DB5432; font: 15px/1 'Trebuchet MS', Arial;" for="name">Count:</label>
-			<input type="text" name="name" id="name" value=""  />
-			<label for="slider-fill">Input slider:</label>
-			<input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" data-theme="f" data-track-theme="a"/>
+			<input type="text" name="count" id="name" value=""  />
+			<!-- <label for="slider-fill">Input slider:</label>
+			<input type="range" name="slider" id="slider-fill" value="60" min="0" max="100" data-highlight="true" data-theme="f" data-track-theme="a"/> -->
 		</div>
 
 		<div class="field_title" data-role="fieldcontain">
 			<label style="color: #DB5432; font: 15px/1 'Trebuchet MS', Arial;" for="name">Description:</label>
 
-			<input type="text" name="name" id="name" value=""  />
+			<input type="text" name="description" id="name" value=""  />
 			
 		</div>
 		<div class="div_dim">
@@ -266,7 +297,7 @@
 			<label style="color: #DB5432; font: 15px/1 'Trebuchet MS', Arial;" for="textarea">
 				Notes:
 			</label>
-			<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+			<textarea cols="40" rows="8" name="notes" id="textarea"></textarea>
 
 		</div>
 
@@ -275,7 +306,7 @@
 				<label style="color: #FF3300; font: 15px/1 'Trebuchet MS', Arial; line-height: 150%; height: 25px;" for="checkbox-1">
 					<text style="top: 15px;">Flag for Admin</text>
 				</label>
-				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+				<input type="checkbox" name="flag_for_admin" id="checkbox-1" value="true"class="custom" />
 			</fieldset>
 
 		</div> 
