@@ -48,6 +48,24 @@
         });
         
     </script>
+    <script>
+    	$(function () {
+			$("hitButton", this).attr("disabled", "disabled");
+			$.ajax({
+				type: "DELETE",
+				url: "http://dev.boulderfoodrescue.org/volunteers/sign_out.json",
+				data: { volunteer_email: window.sessionStorage.email, volunteer_token: window.sessionStorage.token },
+				success: function( data ) {
+					alert('Success');
+					window.location = ("index.html");
+				}
+				error: function ( msg ) {
+					alert(JSON.stringify(msg))
+				}
+			})
+    		}
+    	})
+    </script>
 </head>
 <body onload="init()">
 	<div data-role="page" id="reposHome">  
